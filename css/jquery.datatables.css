@@ -1,0 +1,184 @@
+ /*
+######      #     #######     #     
+#     #    # #       #       # #    
+#     #   #   #      #      #   #   
+#     #  #     #     #     #     #  
+#     #  #######     #     #######  
+#     #  #     #     #     #     #  
+######   #     #     #     #     #  
+
+
+#######     #     ######   #        #######  
+   #       # #    #     #  #        #        
+   #      #   #   #     #  #        #        
+   #     #     #  ######   #        #####    
+   #     #######  #     #  #        #        
+   #     #     #  #     #  #        #        
+   #     #     #  ######   #######  #######  
+
+
+ #####    #####    #####   
+#     #  #     #  #     #  
+#        #        #        
+#         #####    #####   
+#              #        #  
+#     #  #     #  #     #  
+ #####    #####    #####   
+*/
+
+/**
+ * source: http://datatables.net/blog/Creating_beautiful_and_functional_tables_with_DataTables
+ * Color dictionary:
+ *
+ * Table control elements:   #719ba7
+ * Header cells:             #66A9BD
+ * Body header cells:        #91c5d4
+ * Body content cells:       #d5eaf0
+ * Body content cells (alt): #bcd9e1
+ * Footer header:            #b0cc7f
+ * Footer content:           #d7e1c5
+ */
+
+
+
+/* Self clearing - http://www.webtoolkit.info/css-clearfix.html */
+.dataTables_wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+html[xmlns] .dataTables_wrapper {
+  display: block;
+}
+ 
+* html .dataTables_wrapper {
+  height: 1%;
+}
+
+
+/*
+ * Table styles
+ */
+
+/*styles for current design*/
+.dataTables_wrapper {
+  opacity: 0.9;
+}
+.dataTables_wrapper .toolbar {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #797979;
+  border-bottom: 1px solid #5F5F5F;
+}
+
+/*thead styling*/
+.dataTables_wrapper table thead {
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+}
+
+
+table.pretty {
+  width: 100%;
+  clear: both;
+  padding-top: 10px;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+/*tr.odd {
+  border-left: 5px solid #d40000;
+  opacity: 0.8;
+}
+
+tr.even {
+  border-left: 5px solid #1e89c1;
+  opacity: 0.8;
+}*/
+
+
+/*styling for first column*/
+.eventTitle {
+  text-align: center;
+}
+td.eventTitle {
+  font-size: 28px;
+  text-align: left;
+  /*padding: 15px;*/
+  font-weight: bold;
+  border-left: 5px solid #D94141;
+}
+
+tr.odd td.eventTitle {
+  border-left: 5px solid #d40000;
+}
+tr.even td.eventTitle {
+  border-left: 5px solid #1e89c1;
+}
+
+@media (max-width: 991px) {
+  td.eventTitle {
+    font-size: 18px;
+  }
+}
+
+/*styling for second column*/
+.eventStartTime {
+  text-align: center;
+}
+td.eventStartTime {
+  font-size: 16px;
+  font-weight: bold;;
+}
+
+/*styling for second column*/
+/*display: none because design files does not have this showns*/
+.eventEndTime {
+  display: none;
+  text-align: center;
+}
+td.eventEndTime {
+  /*font-size: 16px;*/
+  font-weight: bold;
+}
+
+/*styling for fourth column*/
+.eventDuration {
+  display: none;
+  text-align: center;
+}
+
+/*styling for fifth column*/
+.eventChannel {
+  text-align: center;
+}
+td.eventChannel {
+  font-weight: bold;
+  /*font-size: 24px;*/
+  color: white;
+  opacity: 0.9;
+}
+.odd td.eventChannel {
+  background: #d40000;
+}
+.even td.eventChannel {
+  background: #1e89c1;
+}
+
+/*styling for sixth column*/
+.qualifiers {
+  display: none;
+  /*this content does not need to displayed. it is showing up on it's own from the jQueryUtils*/
+}
+
+
+/*styling for seventh column*/
+.desc {
+  display: none;
+  /*this content does not need to displayed. it is showing up on it's own from the jQueryUtils*/
+}

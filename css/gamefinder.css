@@ -1,0 +1,716 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.background_container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image:url("../images/savage_arena.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -10000;
+ }
+
+.beta {
+  color: white;
+  font-size: 50%;
+  vertical-align: middle;
+}
+
+/************HEADER************/
+.header {
+  background: #393939;
+}
+
+.header a {
+  margin-left: 25px;
+  font-size: 28px;
+  color: #ffffff;
+  /*line-height: 60px;*/
+}
+
+.header a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social_icon_list {
+  /*margin-top: 15px;*/
+}
+.social_icons {
+}
+
+/*TWITTER BOOTSTRAP OVERRIDES FOR HEADER*/
+.navbar-brand {
+  float: none;
+  padding: 0px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  border-color: #393939;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #edf1f2;
+  font-size: 18px;
+}
+
+.navbar-collapse {
+    max-height: none;
+}
+
+/*this media query is to make line height smaller for the nav items they they collapse into the navbar-toggle*/
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav > li > a {
+    line-height: 20px;
+  }
+  /*a vertical scrollbar was showing up, this takes it away*/
+  .navbar-collapse.in {
+    overflow-y: hidden;
+  }
+  .social_icons {
+    display: none;
+  }
+}
+/*this media query sets the social media text to display none to just show the icons when the min width is 768*/
+@media (min-width: 768px) {
+  .social_media_text {
+    display: none;
+  }
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+color: #edf1f2;
+background-color: transparent;
+}
+
+.nav > li > a {
+  padding: 10px 0;
+}
+
+.navbar-toggle {
+  margin-top: 25px;
+}
+
+.navbar-collapse ul li a {
+  line-height: 32px;
+  color: #edf1f2;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 20px;
+  }
+}
+
+/*MEDIA QUERY FOR MYGAMEFINDER LOGO AND NAV RIGHT ITEMS*/
+@media (max-width: 767px) {
+  .header a {
+    line-height: 30px;
+    font-size: 24px;
+  }
+  .header .navbar-right a {
+    line-height: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .header a {
+    line-height: 25px;
+    font-size: 18px;
+  }
+  .header .navbar-right a {
+    line-height: 50px;
+  }
+  .social_icon_list {
+    margin-top: 5px;
+  }
+}
+/*TWITTER BOOTSTRAP OVERRIDES FOR HEADER*/
+
+/************HEADER*************/
+
+
+/************SEARCH************/
+.search {
+  background: white;
+  border-top: 5px solid #ececec;
+  background-color:rgba(255,255,255,0.9);
+}
+
+.search_fields {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #1E89C0;
+}
+
+h2.struggling {
+  font-size: 30px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  h2.struggling {
+    margin: 0 0 0 15px;
+  }
+}
+
+.ongoing {
+  border-top: 2px solid #B6DCE9;
+  background: #EDF1F1;
+  padding-left: 25px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 991px) {
+  .ongoing, .clear_filters {
+    line-height: 20px;
+    padding-left: 0px;
+  }
+}
+
+h4 {
+  color: #fff;
+}
+
+.search_form {
+  margin: 0px;
+}
+
+.ongoing_games_dropdown {
+  font-size:16px;
+  font-family:Arial;
+  font-weight:normal;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #dcdcdc;
+  text-decoration:none;
+  background:-moz-linear-gradient( center top, #717171 5%, #929292 100% );
+  background:-ms-linear-gradient( top, #717171 5%, #929292 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#717171', endColorstr='#929292');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #717171), color-stop(100%, #929292) );
+  background-color:#717171;
+  color:#ffffff;
+  text-shadow:0px 0px 0px #717171;
+  -webkit-box-shadow: 1px 1px 0px 0px #ffffff;
+  -moz-box-shadow: 1px 1px 0px 0px #ffffff;
+  box-shadow: 1px 1px 0px 0px #ffffff;
+}
+
+.ongoing_games_dropdown:hover, .ongoing_games_dropdown:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background:-moz-linear-gradient( center top, #929292 5%, #717171 100% );
+  background:-ms-linear-gradient( top, #929292 5%, #717171 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#929292', endColorstr='#717171');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #929292), color-stop(100%, #717171) );
+  background-color:#929292;
+  color: #ffffff;
+}
+
+.clear_filters {
+  margin-left: -15px
+}
+/*media queries for the the ongoing games dropdown and clear filters button*/
+@media (max-width: 1199px) {
+  .ongoing_games {
+    margin-left: -10px;
+  }
+  .clear_filters {
+    margin-left: -10px;
+  }
+}
+@media (max-width: 991px) {
+  .ongoing_games {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .ongoing_games button {
+    width: 93%;
+    margin-left: 15px;
+  }
+  .clear_filters {
+    width: 100%;
+  }
+  .clear_filters button {
+    width: 93%;
+    margin-left: 15px;
+  }
+  .btn-group {
+    width: 100%;
+  }
+  .dropdown-toggle {
+    width: 93%;
+  }
+  .ongoing_games_dropdown {
+    width: 98%;
+    }
+}
+@media (max-width: 767px) {
+  .ongoing_games {
+    margin-bottom: 10px;
+  }
+  .ongoing_games button {
+    width: 93%;
+  }
+  .clear_filters button {
+    width: 93%;
+  }
+  .ongoing_games_dropdown {
+    width: 100%;
+    }
+}
+
+.custom_button {
+  font-size:16px;
+  font-family:Arial;
+  font-weight:normal;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #dcdcdc;
+  padding:10px 20px;
+  text-decoration:none;
+  background:-moz-linear-gradient( center top, #717171 5%, #929292 100% );
+  background:-ms-linear-gradient( top, #717171 5%, #929292 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#717171', endColorstr='#929292');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #717171), color-stop(100%, #929292) );
+  background-color:#717171;
+  color:#ffffff;
+  display:inline-block;
+  text-shadow:0px 0px 0px #717171;
+  -webkit-box-shadow: 1px 1px 0px 0px #ffffff;
+  -moz-box-shadow: 1px 1px 0px 0px #ffffff;
+  box-shadow: 1px 1px 0px 0px #ffffff;
+}
+.custom_button:hover {
+  background:-moz-linear-gradient( center top, #929292 5%, #717171 100% );
+  background:-ms-linear-gradient( top, #929292 5%, #717171 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#929292', endColorstr='#717171');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #929292), color-stop(100%, #717171) );
+  background-color:#929292;
+}
+.custom_button:active {
+  position:relative;
+  top:1px;
+}
+/* This css button was generated by css-button-generator.com */
+
+#teamName {
+  background: #1D89C1;
+  text-indent: 5px;
+  color: #fff;
+}
+
+.sports, .zipcodes {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #40A2CF;
+  border-top: 1px solid #40A2CF;
+}
+
+.cable_provider {
+  border-bottom: 1px solid #40A2CF;
+  border-top: 1px solid #40A2CF;
+  text-align: center;
+}
+
+#lineup {
+  margin: 10px 0;
+  background: #1D89C1;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+}
+
+.find_channels {
+  background: #717171;
+  border: 1px solid #717171;
+  /*color: #fff;*/
+  padding-right: 30px;
+}
+
+.find_channels_button {
+  width: 105%;
+  height: 80px;
+  background: #717171;
+  color: white;
+  font-size: 30px;
+  border-radius: 0;
+
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #717171;
+  text-decoration:none;
+  background:-moz-linear-gradient( center top, #717171 5%, #929292 100% );
+  background:-ms-linear-gradient( top, #717171 5%, #929292 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#717171', endColorstr='#929292');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #717171), color-stop(100%, #929292) );
+  background-color:#717171;
+  color:#ffffff;
+  display:inline-block;
+  text-shadow:0px 0px 0px #717171;
+  -webkit-box-shadow: 1px 1px 0px 0px #ffffff;
+  -moz-box-shadow: 1px 1px 0px 0px #ffffff;
+  box-shadow: 1px 1px 0px 0px #ffffff;
+}
+
+.find_channels_button:hover {
+  background:-moz-linear-gradient( center top, #929292 5%, #717171 100% );
+  background:-ms-linear-gradient( top, #929292 5%, #717171 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#929292', endColorstr='#717171');
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #929292), color-stop(100%, #717171) );
+  background-color:#929292;
+}
+
+@media (max-width: 640px) {
+  .find_channels_button {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 991px) {
+  .find_channels_button {
+    padding-right: 20px;
+    width: 100%;
+  }
+}
+
+.sports .league-name {
+  margin: 0 20px 5px 20px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+}
+
+.twitter-typeahead {
+  width: 80%;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .twitter-typeahead {
+    width: 100%;
+  }
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+  margin-bottom: 0;
+  z-index: 1;
+  text-indent: 5px;
+}
+
+/*SEARCH FIELDS */
+.typeahead, .tt-query, .tt-hint {
+  font-size: 16px;
+  border: 1px solid #ECECEC;
+  width: 100%;
+  color: #fff;
+}
+
+/*BROWSER SUPPORT FOR TEXT COLOR OF INPUT VALUES IN SEARCH FIELDS*/
+input::-webkit-input-placeholder {
+    color: #ffffff;
+}
+input:-moz-placeholder {
+    color: #ffffff;
+}
+input::-moz-placeholder {
+    color: #ffffff;
+}
+input:-ms-input-placeholder {
+    color: #ffffff;
+}
+/*BROWSER SUPPORT FOR TEXT COLOR OF INPUT VALUES IN SEARCH FIELDS*/
+
+/*CSS FOR AUTOFILL FORM DROPDOWN*/ 
+.tt-dropdown-menu {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 0;
+  color: #ffffff;
+  background-color: #1D89C1;
+  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  /*-webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);*/
+}
+
+
+/************SEARCH************/
+
+/************ABOUT PAGE************/
+
+.about {
+  background: #ffffff;
+  border-top: 5px solid #ececec;
+  opacity: .9;
+}
+
+.about_content {
+  padding: 50px 45px;
+  color: #707070;
+}
+
+@media (max-width: 991px) {
+  .about_content h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about_content h3 {
+    font-size: 14px;
+  }
+}
+
+.results {
+  margin-left: 30px;
+}
+
+
+/************ABOUT PAGE************/
+
+/************CONTACT PAGE************/
+
+.contact_us {
+  background: #ffffff;
+  border-top: 5px solid #ececec;
+  opacity: .9;
+}
+
+.contact_us_content {
+  padding: 45px;
+  color: #707070;
+  text-align: center;
+}
+
+.contact_us_content h3 {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+input.nameinput, input.emailinput {
+  padding: 5px;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  border: solid 2px #1E89C0;
+}
+
+textarea.messageinput {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
+  padding: 5px;
+  resize: none;
+  margin-bottom:20px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(27, 118, 167, 0.75);
+  border: solid 2px #1E89C0;
+}
+
+
+
+@media (max-width: 767px) {
+  input.nameinput, input.emailinput, textarea.messageinput {
+    width: 100%;
+  }
+}
+
+/*PLACEHOLDER TEXT COLOR FOR CONTACT PAGE*/
+input.contact_us_input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+input.contact_us_input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+input.contact_us_input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+input.contact_us_input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+}
+textarea.contact_us_input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+textarea.contact_us_input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #000;
+}
+textarea.contact_us_input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #000;
+}
+textarea.contact_us_input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #000;
+  }
+/*PLACEHOLDER TEXT COLOR FOR CONTACT PAGE*/
+
+.send-message {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: -moz-linear-gradient(
+    top,
+    #124F70 0%,
+    #124F70);
+  background: -webkit-gradient(
+    linear, left top, left bottom,
+    from(#124F70),
+    to(#124F70));
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: 0px solid #20688c;
+  -moz-box-shadow:
+    3px 3px 4px rgba(32,104,140,0.6),
+    inset 0px 0px 2px rgba(32,104,140,1);
+  -webkit-box-shadow:
+    3px 3px 4px rgba(32,104,140,0.6),
+    inset 0px 0px 2px rgba(32,104,140,1);
+  box-shadow:
+    3px 3px 4px rgba(32,104,140,0.6),
+    inset 0px 0px 2px rgba(32,104,140,1);
+  text-shadow:
+    0px 0px 0px rgba(000,000,000,0.4),
+    0px 1px 0px rgba(255,255,255,0.3);
+}
+
+/* custom font! */
+/* ------------ */
+
+/* scaffolding */
+/* ----------- */
+
+html {
+  overflow-y: scroll;
+  *overflow-x: hidden;
+}
+
+.tt-dropdown-menu,
+.gist {
+  text-align: left;
+}
+
+/* base styles */
+/* ----------- */
+
+
+/* example specific styles */
+/* ----------------------- */
+.example {
+  padding: 30px 0;
+  background: yellow;
+}
+
+.example-name {
+  margin: 40px 0;
+  font-size: 16px;
+  background: yellow;
+}
+
+.demo {
+  position: relative;
+  z-index: 1;
+  margin: 5px 0;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  opacity: 0;
+}
+
+/*CSS FOR AUTOFILL FORM DROPDOWN*/ 
+.tt-dropdown-menu {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 0;
+  color: #ffffff;
+  background-color: #1D89C1;
+  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  /*-webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);*/
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.example-twitter-oss .tt-suggestion {
+  padding: 8px 20px;
+}
+
+.example-twitter-oss .tt-suggestion + .tt-suggestion {
+  border-top: 1px solid #ccc;
+}
+
+.example-twitter-oss .repo-language {
+  float: right;
+  font-style: italic;
+}
+
+.example-twitter-oss .repo-name {
+  font-weight: bold;
+}
+
+.example-twitter-oss .repo-description {
+  font-size: 14px;
+}
+
+.example-arabic .tt-dropdown-menu {
+  text-align: right;
+}

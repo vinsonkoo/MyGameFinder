@@ -1,0 +1,24 @@
+h4.placeholder_workaround {
+  display: inline;
+  color: #ffffff;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+  margin-bottom: 0;
+  text-indent: 5px;
+  background: #000;
+  width: 50%;
+}
+
+#teamName {
+  width: 80%;
+  text-indent: 5px;
+  color: #fff;
+}
+#zipcode {
+  width: 80%;
+  text-indent: 5px;
+  color: #fff;
+  background: transparent;
+}
